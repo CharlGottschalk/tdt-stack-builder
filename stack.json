@@ -1,0 +1,27 @@
+{
+  "contract_version": 1,
+  "id": "dryft-stack-builder",
+  "version": "0.2.0",
+  "description": "Create, validate and prepare standalone Dryft stacks for publication.",
+  "author": "Dryft",
+  "license": "Apache-2.0",
+  "skills": [
+    "skills/dryft-stack-builder-create/SKILL.md",
+    "skills/dryft-stack-builder-publish/SKILL.md"
+  ],
+  "hooks": [],
+  "knowledge": [],
+  "templates": [
+    "templates/README.md",
+    "templates/hooks/example.py",
+    "templates/knowledge/note.md",
+    "templates/registry-submission.md",
+    "templates/skill/SKILL.md",
+    "templates/stack.json",
+    "templates/interview.json"
+  ],
+  "docs": [
+    "docs/usage.md",
+    "docs/publishing.md"
+  ]
+}

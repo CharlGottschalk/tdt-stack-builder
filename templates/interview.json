@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "title": "Build a useful stack",
+  "description": "A small workflow, with a clear purpose.",
+  "steps": [
+    {
+      "title": "Purpose and behavior",
+      "fields": [
+        {
+          "id": "purpose",
+          "type": "multiline",
+          "label": "What should this stack help you do?",
+          "required": true
+        },
+        {
+          "id": "behavior",
+          "type": "multiline",
+          "label": "What should its first skill do?",
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "Bundle details",
+      "fields": [
+        {
+          "id": "target",
+          "type": "text",
+          "label": "New source directory",
+          "required": true,
+          "help": "An empty directory outside your Dryft workspace."
+        },
+        {
+          "id": "id",
+          "type": "text",
+          "label": "Stack ID (namespace-name)",
+          "required": true
+        },
+        {
+          "id": "author",
+          "type": "text",
+          "label": "Author",
+          "required": true
+        },
+        {
+          "id": "license",
+          "type": "text",
+          "label": "License",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
