@@ -10,8 +10,8 @@ Author: {{author}}
 License: {{license}}
 
 ```sh
-dryft stack validate ./{{id}}
-dryft --workspace ./workspace stack install ./{{id}}
+tdt stack validate ./{{id}}
+tdt --workspace ./workspace stack install ./{{id}}
 ```
 
 Review validation output before installation. If this stack selects executable
@@ -23,7 +23,9 @@ Restart the host and use /{{skill_name}}. Codex may require ${{skill_name}} or i
 skill picker. {{usage_example}}
 
 Keep this stack in its own source repository. Do not bundle private brain notes,
-transcripts, .dryft state, secrets or external project source. Record real source
+transcripts, .tdt state, secrets or external project source. Record real source
 references and revisions. Registry submission notes are a draft, not publication.
-To remove: dryft --workspace ./workspace stack remove {{id}}. Brain notes
-are preserved. v1 upgrades require removal and reinstallation.
+To remove: tdt --workspace ./workspace stack remove {{id}}. Brain notes
+are preserved. Inspect updates with
+`tdt --workspace ./workspace stack update {{id}} --check`, then review and approve
+the proposed update. For a local source, add `--source ./{{id}}`.

@@ -1,13 +1,13 @@
 {
   "contract_version": 1,
-  "id": "dryft-stack-builder",
+  "id": "tdt-stack-builder",
   "version": "0.2.0",
-  "description": "Create, validate and prepare standalone Dryft stacks for publication.",
-  "author": "Dryft",
+  "description": "Create, validate and prepare standalone ThisDamnThing stacks for publication.",
+  "author": "ThisDamnThing",
   "license": "Apache-2.0",
   "skills": [
-    "skills/dryft-stack-builder-create/SKILL.md",
-    "skills/dryft-stack-builder-publish/SKILL.md"
+    "skills/tdt-stack-builder-create/SKILL.md",
+    "skills/tdt-stack-builder-publish/SKILL.md"
   ],
   "hooks": [],
   "knowledge": [],
@@ -23,5 +23,95 @@
   "docs": [
     "docs/usage.md",
     "docs/publishing.md"
-  ]
+  ],
+  "marketplace": {
+    "extension_type": "capability",
+    "categories": [
+      "authoring"
+    ],
+    "tags": [
+      "stacks",
+      "authoring"
+    ],
+    "icon": null,
+    "screenshots": [],
+    "documentation_url": "https://github.com/CharlGottschalk/tdt-stack-builder/blob/main/README.md",
+    "support_url": "https://github.com/CharlGottschalk/tdt-stack-builder/issues",
+    "supported_agents": [
+      "claude",
+      "codex"
+    ],
+    "dependencies": [
+      {
+        "ref": "thisdamnthing",
+        "name": "ThisDamnThing",
+        "type": "cli",
+        "required": true,
+        "purpose": "Validate and install the stack; provide workspace commands and contracts.",
+        "setup_url": "https://usethisdamnthing.com/docs",
+        "version_constraint": null,
+        "authentication_required": false,
+        "payment_required": false
+      },
+      {
+        "ref": "python",
+        "name": "Python",
+        "type": "runtime",
+        "required": true,
+        "purpose": "Run local helper scripts and providers.",
+        "setup_url": "https://www.python.org/downloads/",
+        "version_constraint": "3.12",
+        "authentication_required": false,
+        "payment_required": false
+      },
+      {
+        "ref": "git",
+        "name": "Git",
+        "type": "cli",
+        "required": true,
+        "purpose": "Inspect source history and prepare authorized commits and releases.",
+        "setup_url": "https://git-scm.com/downloads",
+        "version_constraint": null,
+        "authentication_required": false,
+        "payment_required": false
+      },
+      {
+        "ref": "gh",
+        "name": "GitHub CLI",
+        "type": "cli",
+        "required": false,
+        "purpose": "Optionally publish an authorized GitHub release.",
+        "setup_url": "https://cli.github.com/",
+        "version_constraint": null,
+        "authentication_required": true,
+        "payment_required": false
+      }
+    ],
+    "capabilities": [
+      {
+        "type": "file_read",
+        "scope": "Stack source files, manifests, selected assets and Git history.",
+        "purpose": "Inspect project context and prepare requested work.",
+        "data_leaves_machine": "Context selected by the agent may be sent to the configured model provider."
+      },
+      {
+        "type": "file_write",
+        "scope": "Stack source files, manifests, selected assets and Git history.",
+        "purpose": "Create and update files requested by the user.",
+        "data_leaves_machine": "None."
+      },
+      {
+        "type": "process",
+        "scope": "Local shell, Git, validation tools and project helpers.",
+        "purpose": "Run authorized validation and development commands.",
+        "data_leaves_machine": "None."
+      },
+      {
+        "type": "network",
+        "scope": "Configured model provider, GitHub and user-selected external services.",
+        "purpose": "Perform agent work and explicitly authorized publication or integrations.",
+        "data_leaves_machine": "Selected context goes to the configured model provider; authorized publication sends source and release metadata to GitHub. External integrations receive only the requested content."
+      }
+    ]
+  }
 }

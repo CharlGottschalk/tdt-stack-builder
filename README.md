@@ -1,17 +1,17 @@
-![Dryft Stack Builder](docs/assets/banner.png)
+![ThisDamnThing Stack Builder](docs/assets/banner.png)
 
 # Stack Builder
 
-A [Dryft](https://usedryft.com) stack for creating your own stacks. It provides authoring and publishing skills plus
+A [ThisDamnThing](https://usethisdamnthing.com) stack for creating your own stacks. It provides authoring and publishing skills plus
 starter templates to turn a workflow idea into a standalone bundle with skills,
 a manifest, a README and registry submission notes. The builder validates the
-result and can gather missing details in chat or [Dryft](https://usedryft.com) UI. The publishing skill
+result and can gather missing details in chat or [ThisDamnThing](https://usethisdamnthing.com) UI. The publishing skill
 checks contract compliance, privacy, security and release metadata, then offers
 a GitHub release or a manual checklist and marketplace submission guidance.
 
 ## Release status
 
-Candidate version: **0.2.0**. Canonical source: [1one8/dryft-stack-builder](https://github.com/1one8/dryft-stack-builder).
+Candidate version: **0.2.0**. Canonical source: [CharlGottschalk/tdt-stack-builder](https://github.com/CharlGottschalk/tdt-stack-builder).
 The registry commands below are the planned public installation path; production
 listing and installation are still awaiting release verification.
 
@@ -23,9 +23,9 @@ a push, release or marketplace submission.
 
 ## Install
 
-With [Dryft](https://usedryft.com) installed and a workspace initialized, ask your agent to install
-`dryft-stack-builder` using `/dryft-install-stack` (Claude) or
-`$dryft-install-stack` (Codex). The skill finds the stack in the marketplace,
+With [ThisDamnThing](https://usethisdamnthing.com) installed and a workspace initialized, ask your agent to install
+`tdt-stack-builder` using `/tdt-install-stack` (Claude) or
+`$tdt-install-stack` (Codex). The skill finds the stack in the marketplace,
 shows the selected release for review and installs it from the registry.
 
 Or use the CLI, replacing the workspace path with your own:
@@ -35,17 +35,17 @@ the stack source directories. Paths are relative to that directory; adjust them
 to your layout. Commands without `--workspace` run from the workspace root.
 
 ```sh
-dryft stack install dryft-stack-builder --inspect
-dryft --workspace ./workspace stack install dryft-stack-builder
+tdt stack install tdt-stack-builder --inspect
+tdt --workspace ./workspace stack install tdt-stack-builder
 ```
 
 Review the inspected release and any prerequisites before running the install
-command. Restart your agent in the [Dryft](https://usedryft.com) workspace, then invoke
-`/dryft-stack-builder-create` in Claude or `$dryft-stack-builder-create` in Codex.
+command. Restart your agent in the [ThisDamnThing](https://usethisdamnthing.com) workspace, then invoke
+`/tdt-stack-builder-create` in Claude or `$tdt-stack-builder-create` in Codex.
 
 See the [usage guide](docs/usage.md) for creating and trying your first stack,
 and the [publishing guide](docs/publishing.md) for release preparation.
 
 ## License
 
-Licensed under the [Apache License 2.0](LICENSE). Copyright 1one8 (Pty) Ltd.
+Licensed under the [Apache License 2.0](LICENSE). Copyright Charl Gottschalk.

@@ -1,13 +1,13 @@
 ---
-name: dryft-stack-builder-publish
-description: Prepare a Dryft stack for marketplace submission, check privacy, security and release metadata, and optionally publish its GitHub release.
+name: tdt-stack-builder-publish
+description: Prepare a ThisDamnThing stack for marketplace submission, check privacy, security and release metadata, and optionally publish its GitHub release.
 ---
 
-Prepare the user's source stack for publication. Locate the Dryft workspace by
-`.dryft/config.json`; read `.dryft/contracts/stack.md` and
-`.dryft/stacks/dryft-stack-builder/docs/publishing.md`. Resolve these from the
+Prepare the user's source stack for publication. Locate the ThisDamnThing workspace by
+`.tdt/config.json`; read `.tdt/contracts/stack.md` and
+`.tdt/stacks/tdt-stack-builder/docs/publishing.md`. Resolve these from the
 workspace, not from a host bridge or projected skill directory. Use the installed
-contract for v1/v2 rules. Do not require the Dryft development repository, its
+contract for v1/v2 rules. Do not require the ThisDamnThing development repository, its
 private skills, or the software-production stack.
 
 1. Resolve the source repository, root `stack.json`, intended version and GitHub
@@ -41,7 +41,14 @@ private skills, or the software-production stack.
    described in the guide. Reuse matching existing releases and resume partial
    success without duplicates or deletion. Report the actual state: prepared,
    blocked, tagged, released, or release verified; never call it submitted/live.
-   In both paths tell the author to visit https://stacks.usedryft.com to submit
+   In both paths tell the author to visit https://stacks.usethisdamnthing.com to submit
    the repository and release for review, registering/signing in as needed.
    Open the website only when requested. This skill does not submit on their
    behalf and marketplace approval remains separate.
+
+Marketplace metadata belongs only in `stack.json.marketplace`, using the installed
+stack contract and marketplace manifest schema. Read prerequisites and capability
+claims from inspected source; do not invent them. Verify the committed manifest
+contains supported agents, dependencies, disclosures, classification and links.
+The submission form accepts only name, GitHub URL and description. The database
+stores release/review references, never a second metadata copy.
