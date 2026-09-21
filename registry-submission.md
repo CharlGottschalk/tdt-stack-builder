@@ -5,7 +5,7 @@ Canonical repository is assigned; the release and production listing still need 
 
 - ID: tdt-stack-builder
 - Description: Create, validate and prepare standalone ThisDamnThing stacks for publication.
-- Version: 0.2.1
+- Version: 0.2.2
 - Author: ThisDamnThing
 - License: Apache-2.0
 - Copyright: Charl Gottschalk
@@ -19,7 +19,8 @@ selected-content SHA256 is not an archive digest. Never invent either value.
 - Extension type: capability
 - Full description: Author standalone stacks, run publication readiness checks,
   prepare release notes, optionally publish with Git/gh, and guide website submission.
-- Categories/tags: declared in stack.json.marketplace; verify supported values before publication
+- Category: select Stack authoring (`authoring`) from the website dropdown.
+- Tags: declared in stack.json.marketplace; validate them before publication.
 - Supported agents: Claude and Codex authoring checked; publishing invocation pending
 - Prerequisites: ThisDamnThing CLI and Git; optional authenticated GitHub CLI for automated
   releases, with manual Git/GitHub website fallback. Network access for remote checks.

@@ -1,7 +1,7 @@
 {
   "contract_version": 1,
   "id": "tdt-stack-builder",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Create, validate and prepare standalone ThisDamnThing stacks for publication.",
   "author": "ThisDamnThing",
   "license": "Apache-2.0",
@@ -26,9 +26,6 @@
   ],
   "marketplace": {
     "extension_type": "capability",
-    "categories": [
-      "authoring"
-    ],
     "tags": [
       "stacks",
       "authoring"
@@ -49,7 +46,7 @@
         "required": true,
         "purpose": "Validate and install the stack; provide workspace commands and contracts.",
         "setup_url": "https://usethisdamnthing.com/docs",
-        "version_constraint": null,
+        "version_constraint": ">=0.1.1",
         "authentication_required": false,
         "payment_required": false
       },
