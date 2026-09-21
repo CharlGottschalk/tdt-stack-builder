@@ -95,4 +95,9 @@ For a stack intended for marketplace publication, populate `stack.json.marketpla
 from the installed contract after inspecting its actual behavior and prerequisites.
 Local-only templates may omit it; publication must not. Do not confuse v2 runtime
 `capabilities` with `marketplace.capabilities` effect disclosures. The marketplace
-form has only name, GitHub URL and description.
+form has name, GitHub URL, curated category and description.
+
+Choose the listing category from the website dropdown. Never add categories to
+new stack manifests. Tags remain author-defined in `stack.json.marketplace.tags`
+(up to 20 lowercase hyphenated slugs, 64 characters each); they are validated and
+deduplicated from the pinned release, and have no separate form field.

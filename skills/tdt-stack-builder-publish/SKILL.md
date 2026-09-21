@@ -50,5 +50,10 @@ Marketplace metadata belongs only in `stack.json.marketplace`, using the install
 stack contract and marketplace manifest schema. Read prerequisites and capability
 claims from inspected source; do not invent them. Verify the committed manifest
 contains supported agents, dependencies, disclosures, classification and links.
-The submission form accepts only name, GitHub URL and description. The database
-stores release/review references, never a second metadata copy.
+The submission form accepts name, GitHub URL, curated category and description. The database
+stores release/review references and indexed tags from the pinned manifest.
+
+Choose the listing category from the website dropdown. Never add categories to
+new stack manifests. Tags remain author-defined in `stack.json.marketplace.tags`
+(up to 20 lowercase hyphenated slugs, 64 characters each); they are validated and
+deduplicated from the pinned release, and have no separate form field.

@@ -101,10 +101,10 @@ resolved documentation links. A changelog is useful, not a universal contract
 requirement. `registry-submission.md` is a convenient draft, not a required manifest
 field or mandatory marketplace filename.
 
-The form collects only a name, GitHub URL and description. Put the remaining
+The form collects a name, GitHub URL, curated category and description. Put the remaining
 publication metadata in `stack.json.marketplace`: extension type
 (`functionality`, `capability`, `both`),
-site-supported categories, lowercase tags, supported agents, prerequisites and
+lowercase tags, supported agents, prerequisites and
 capability/data-flow disclosures. Record required/optional dependencies, purpose,
 setup links, version constraints, authentication and payment needs without secrets.
 Disclose reads/writes, process/network/connector access, data leaving the machine
@@ -212,3 +212,8 @@ End with that marketplace reminder in both automated and manual paths. The autho
 submits through the site; publication alone does not create an approved listing.
 Each new version requires review. Only report submitted/approved if independently
 observed or explicitly attributed to the author, never inferred from release success.
+
+Choose the listing category from the website dropdown. Never add categories to
+new stack manifests. Tags remain author-defined in `stack.json.marketplace.tags`
+(up to 20 lowercase hyphenated slugs, 64 characters each); they are validated and
+deduplicated from the pinned release, and have no separate form field.

@@ -11,7 +11,7 @@ a GitHub release or a manual checklist and marketplace submission guidance.
 
 ## Release status
 
-Candidate version: **0.2.1**. Canonical source: [CharlGottschalk/tdt-stack-builder](https://github.com/CharlGottschalk/tdt-stack-builder).
+Candidate version: **0.2.2**. Canonical source: [CharlGottschalk/tdt-stack-builder](https://github.com/CharlGottschalk/tdt-stack-builder).
 The registry commands below are the planned public installation path; production
 listing and installation are still awaiting release verification.
 
@@ -49,3 +49,6 @@ and the [publishing guide](docs/publishing.md) for release preparation.
 ## License
 
 Licensed under the [Apache License 2.0](LICENSE). Copyright Charl Gottschalk.
+
+This candidate requires ThisDamnThing 0.1.1 or newer for category-free marketplace
+manifests. Existing published releases keep their original requirements.
