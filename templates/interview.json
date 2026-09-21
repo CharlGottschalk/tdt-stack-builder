@@ -28,7 +28,7 @@
           "type": "text",
           "label": "New source directory",
           "required": true,
-          "help": "An empty directory outside your Dryft workspace."
+          "help": "An empty directory outside your ThisDamnThing workspace."
         },
         {
           "id": "id",

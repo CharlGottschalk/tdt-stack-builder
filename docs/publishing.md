@@ -4,8 +4,8 @@ Run the path-based examples from a parent directory containing `workspace` and
 the stack source directories. Paths are relative to that directory; adjust them
 to your layout. Commands without `--workspace` run from the workspace root.
 
-Invoke `/dryft-stack-builder-publish` in Claude or
-`$dryft-stack-builder-publish` in Codex with the source directory and intended
+Invoke `/tdt-stack-builder-publish` in Claude or
+`$tdt-stack-builder-publish` in Codex with the source directory and intended
 version. The skill prepares a release, runs checks, and offers GitHub publication
 when ready. You can choose manual publication instead. Neither path submits the
 stack to the marketplace automatically.
@@ -13,7 +13,7 @@ stack to the marketplace automatically.
 ## Record the candidate
 
 Use one stack at a Git repository root. Record the canonical GitHub repository,
-manifest ID/version, intended tag (`X.Y.Z` or `vX.Y.Z`), full commit SHA and [Dryft](https://usedryft.com)
+manifest ID/version, intended tag (`X.Y.Z` or `vX.Y.Z`), full commit SHA and [ThisDamnThing](https://usethisdamnthing.com)
 selected-content SHA256. A tag must equal the manifest version after removing at
 most one leading `v`. Never infer identity, license, destination or compatibility.
 Inspect existing local and remote tags/releases before proposing a new version.
@@ -30,16 +30,15 @@ review evidence. Record commands, tool versions, scope, exit results and limitat
 
 ### 1. Contract and packaged files
 
-Run `dryft stack validate ./stack` and inspect the actual output. Use the
-installed `.dryft/contracts/stack.md`, including its v2 additions when applicable.
+Run `tdt stack validate ./stack` and inspect the actual output. Use the
+installed `.tdt/contracts/stack.md`, including its v2 additions when applicable.
 Confirm the manifest ID, source directory and repository name use the same
-normalized lowercase hyphen-separated name (for example `dryft-search-sqlite`).
+normalized lowercase hyphen-separated name (for example `tdt-search-sqlite`).
 A display title can remain human-readable. After a rename, publish a commit whose
 manifest contains the new ID and regenerate registry identities and digests;
 renaming the GitHub repository alone does not change an older release archive.
 Check required fields, numeric version, names/frontmatter, explicit file lists,
-hooks, docs, knowledge, safe paths, limits and v2 compatibility/asset hashes. Do not
-add listing fields to `stack.json`. CLI absence or unsupported contract is incomplete.
+hooks, docs, knowledge, safe paths, limits and v2 compatibility/asset hashes. Declare publication metadata in the `marketplace` object in `stack.json`. CLI absence or unsupported contract is incomplete.
 
 Validate an isolated archive of the exact candidate commit too, not only the
 working directory. Inspect archive entries before extraction; reject traversal,
@@ -50,7 +49,7 @@ pointers. A separately attached release asset does not repair the marketplace's
 commit-source archive. Resolve missing content before publication.
 
 Check installed documentation and skill references using only manifest-selected
-files laid out as `.dryft/stacks/<id>/` and projected skills; core contract/skill
+files laid out as `.tdt/stacks/<id>/` and projected skills; core contract/skill
 references resolve from the workspace. Source-only links do not count as installed
 coverage. This can be a disposable layout check without executing hooks/providers.
 Record real host/platform checks separately from static validation; do not invent
@@ -102,9 +101,9 @@ resolved documentation links. A changelog is useful, not a universal contract
 requirement. `registry-submission.md` is a convenient draft, not a required manifest
 field or mandatory marketplace filename.
 
-Prepare listing information outside the manifest: stable ID, display name, summary
-matching the manifest description, full description, public author, license,
-canonical public GitHub URL, extension type (`functionality`, `capability`, `both`),
+The form collects only a name, GitHub URL and description. Put the remaining
+publication metadata in `stack.json.marketplace`: extension type
+(`functionality`, `capability`, `both`),
 site-supported categories, lowercase tags, supported agents, prerequisites and
 capability/data-flow disclosures. Record required/optional dependencies, purpose,
 setup links, version constraints, authentication and payment needs without secrets.
@@ -170,7 +169,7 @@ credentials, using HTTPS and only the intended codeload host for redirects.
 Bound requests to 30 seconds, compressed bytes to 384 MiB, expanded bytes to
 512 MiB and entries to 12,000. Before extraction require one top-level directory
 with root `stack.json`; reject unsafe paths, symlinks, special/encrypted entries,
-duplicates and nesting beyond 20 components. Reuse available [Dryft](https://usedryft.com) archive
+duplicates and nesting beyond 20 components. Reuse available [ThisDamnThing](https://usethisdamnthing.com) archive
 validation rather than extracting unchecked ZIPs.
 
 Hash the actual downloaded ZIP with SHA256, validate its safely extracted root,
@@ -204,7 +203,7 @@ known values and mark unknowns and failed checks; do not present blockers as don
 - [ ] Complete the public release/archive verification above; record the release
   URL, full commit and both verified SHA256 values. Ask the agent to help verify
   when tools are available; skipped checks remain pending.
-- [ ] Visit [the Dryft marketplace](https://stacks.usedryft.com), register/sign in
+- [ ] Visit [the ThisDamnThing marketplace](https://stacks.usethisdamnthing.com), register/sign in
   as needed, and submit your repository and release with the prepared listing
   information. Follow the website's repository-control and review steps. If the
   site is unavailable, retain the checklist and retry later; do not claim submission.
