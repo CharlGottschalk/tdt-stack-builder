@@ -5,7 +5,7 @@ Canonical repository is assigned; the release and production listing still need 
 
 - ID: tdt-stack-builder
 - Description: Create, validate and prepare standalone ThisDamnThing stacks for publication.
-- Version: 0.2.0
+- Version: 0.2.1
 - Author: ThisDamnThing
 - License: Apache-2.0
 - Copyright: Charl Gottschalk
