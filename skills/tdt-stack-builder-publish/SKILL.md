@@ -41,7 +41,7 @@ private skills, or the software-production stack.
    described in the guide. Reuse matching existing releases and resume partial
    success without duplicates or deletion. Report the actual state: prepared,
    blocked, tagged, released, or release verified; never call it submitted/live.
-   In both paths tell the author to visit https://stacks.usethisdamnthing.com to submit
+   In both paths tell the author to visit https://stacks.usetdt.com to submit
    the repository and release for review, registering/signing in as needed.
    Open the website only when requested. This skill does not submit on their
    behalf and marketplace approval remains separate.

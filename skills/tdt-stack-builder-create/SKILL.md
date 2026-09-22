@@ -75,7 +75,7 @@ protocol; this stack supplies only inert templates and agent guidance.
 Keep each stack in its own source repository. Initialize or commit locally when
 requested; never invent a remote, push or publish without authorization. Keep
 registry-submission.md clearly marked draft; authors submit verified releases
-through https://stacks.usethisdamnthing.com. Include known ID, description, version, author, license, skills
+through https://stacks.usetdt.com. Include known ID, description, version, author, license, skills
 and repository URL if supplied. Record a real source commit only after committing;
 never invent a digest or resolved revision. Put publication metadata only in
 stack.json.marketplace; keep release references and review records outside the
