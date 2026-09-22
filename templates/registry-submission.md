@@ -1,6 +1,6 @@
 # Registry submission draft
 
-Draft only. Submit a verified release through https://stacks.usethisdamnthing.com.
+Draft only. Submit a verified release through https://stacks.usetdt.com.
 This file is not part of stack.json and does not claim a published listing.
 
 - ID: {{id}}

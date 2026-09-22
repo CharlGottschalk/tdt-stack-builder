@@ -13,7 +13,7 @@ stack to the marketplace automatically.
 ## Record the candidate
 
 Use one stack at a Git repository root. Record the canonical GitHub repository,
-manifest ID/version, intended tag (`X.Y.Z` or `vX.Y.Z`), full commit SHA and [ThisDamnThing](https://usethisdamnthing.com)
+manifest ID/version, intended tag (`X.Y.Z` or `vX.Y.Z`), full commit SHA and [ThisDamnThing](https://usetdt.com)
 selected-content SHA256. A tag must equal the manifest version after removing at
 most one leading `v`. Never infer identity, license, destination or compatibility.
 Inspect existing local and remote tags/releases before proposing a new version.
@@ -169,7 +169,7 @@ credentials, using HTTPS and only the intended codeload host for redirects.
 Bound requests to 30 seconds, compressed bytes to 384 MiB, expanded bytes to
 512 MiB and entries to 12,000. Before extraction require one top-level directory
 with root `stack.json`; reject unsafe paths, symlinks, special/encrypted entries,
-duplicates and nesting beyond 20 components. Reuse available [ThisDamnThing](https://usethisdamnthing.com) archive
+duplicates and nesting beyond 20 components. Reuse available [ThisDamnThing](https://usetdt.com) archive
 validation rather than extracting unchecked ZIPs.
 
 Hash the actual downloaded ZIP with SHA256, validate its safely extracted root,
@@ -203,7 +203,7 @@ known values and mark unknowns and failed checks; do not present blockers as don
 - [ ] Complete the public release/archive verification above; record the release
   URL, full commit and both verified SHA256 values. Ask the agent to help verify
   when tools are available; skipped checks remain pending.
-- [ ] Visit [the ThisDamnThing marketplace](https://stacks.usethisdamnthing.com), register/sign in
+- [ ] Visit [the ThisDamnThing marketplace](https://stacks.usetdt.com), register/sign in
   as needed, and submit your repository and release with the prepared listing
   information. Follow the website's repository-control and review steps. If the
   site is unavailable, retain the checklist and retry later; do not claim submission.

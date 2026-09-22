@@ -1,6 +1,6 @@
 # Registry submission draft
 
-Draft only; submit the verified release through https://stacks.usethisdamnthing.com.
+Draft only; submit the verified release through https://stacks.usetdt.com.
 Canonical repository is assigned; the release and production listing still need verification.
 
 - ID: tdt-stack-builder

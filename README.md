@@ -2,10 +2,10 @@
 
 # Stack Builder
 
-A [ThisDamnThing](https://usethisdamnthing.com) stack for creating your own stacks. It provides authoring and publishing skills plus
+A [ThisDamnThing](https://usetdt.com) stack for creating your own stacks. It provides authoring and publishing skills plus
 starter templates to turn a workflow idea into a standalone bundle with skills,
 a manifest, a README and registry submission notes. The builder validates the
-result and can gather missing details in chat or [ThisDamnThing](https://usethisdamnthing.com) UI. The publishing skill
+result and can gather missing details in chat or [ThisDamnThing](https://usetdt.com) UI. The publishing skill
 checks contract compliance, privacy, security and release metadata, then offers
 a GitHub release or a manual checklist and marketplace submission guidance.
 
@@ -23,7 +23,7 @@ a push, release or marketplace submission.
 
 ## Install
 
-With [ThisDamnThing](https://usethisdamnthing.com) installed and a workspace initialized, ask your agent to install
+With [ThisDamnThing](https://usetdt.com) installed and a workspace initialized, ask your agent to install
 `tdt-stack-builder` using `/tdt-install-stack` (Claude) or
 `$tdt-install-stack` (Codex). The skill finds the stack in the marketplace,
 shows the selected release for review and installs it from the registry.
@@ -40,7 +40,7 @@ tdt --workspace ./workspace stack install tdt-stack-builder
 ```
 
 Review the inspected release and any prerequisites before running the install
-command. Restart your agent in the [ThisDamnThing](https://usethisdamnthing.com) workspace, then invoke
+command. Restart your agent in the [ThisDamnThing](https://usetdt.com) workspace, then invoke
 `/tdt-stack-builder-create` in Claude or `$tdt-stack-builder-create` in Codex.
 
 See the [usage guide](docs/usage.md) for creating and trying your first stack,

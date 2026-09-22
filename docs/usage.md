@@ -4,13 +4,13 @@ Run the path-based examples from a parent directory containing `workspace` and
 the stack source directories. Paths are relative to that directory; adjust them
 to your layout. Commands without `--workspace` run from the workspace root.
 
-Stack Builder helps you create a standalone [ThisDamnThing](https://usethisdamnthing.com) stack from a workflow idea.
+Stack Builder helps you create a standalone [ThisDamnThing](https://usetdt.com) stack from a workflow idea.
 It supplies authoring and publishing skills and templates for the manifest, skill, README,
 registry submission notes, optional knowledge, hooks and a browser interview.
 
 ## Install and start
 
-With [ThisDamnThing](https://usethisdamnthing.com) installed and a workspace initialized, invoke `/tdt-install-stack`
+With [ThisDamnThing](https://usetdt.com) installed and a workspace initialized, invoke `/tdt-install-stack`
 in Claude or `$tdt-install-stack` in Codex and ask to install
 `tdt-stack-builder`. The skill searches the marketplace, inspects the selected
 release and guides installation after review.
@@ -34,7 +34,7 @@ also available.
 
 ## Describe your stack
 
-Provide the workflow you want, a new target directory outside your [ThisDamnThing](https://usethisdamnthing.com) workspace,
+Provide the workflow you want, a new target directory outside your [ThisDamnThing](https://usetdt.com) workspace,
 a normalized ID such as `example-greeter`, an author, a license and the desired
 skill behavior. You can choose a version; the default is `0.1.0`.
 
@@ -112,7 +112,7 @@ Hooks run with the agent's OS access and inherited environment. Starter hooks
 should not read secrets, contact services or start background processes. Payload
 JSON arrives on stdin; stdout does not inject context or block Stop. Notifications
 may repeat or be skipped, so keep work bounded and idempotent. Each hook has two
-seconds, with four seconds shared across the dispatch. [ThisDamnThing](https://usethisdamnthing.com) checks installed
+seconds, with four seconds shared across the dispatch. [ThisDamnThing](https://usetdt.com) checks installed
 bytes before execution; hooks do not change host permissions.
 
 ## Prepare for distribution
@@ -136,7 +136,7 @@ tag push and a GitHub release after the worktree is clean and publication is
 authorized. It supplies a manual checklist if `gh` is missing or declined.
 
 Read the [publishing guide](publishing.md) for checks, release verification and
-recovery. Once the release is verified, visit https://stacks.usethisdamnthing.com to submit
+recovery. Once the release is verified, visit https://stacks.usetdt.com to submit
 your stack for review. The skill does not submit or approve a marketplace listing.
 
 ## Capability stacks
@@ -144,7 +144,7 @@ your stack for review. The skill does not submit or approve a marketplace listin
 For a brain search provider, ask for a contract-v2 capability stack. It needs
 compatibility declarations, one `brain.search` interface, and runtime/model assets
 with exact sizes and SHA256 digests. Follow the installed stack contract's bounded
-JSON subprocess protocol; provider code must not be imported into [ThisDamnThing](https://usethisdamnthing.com) core.
+JSON subprocess protocol; provider code must not be imported into [ThisDamnThing](https://usetdt.com) core.
 
 Bundle the offline dependencies and their licenses, keep Markdown authoritative,
 and use the core-managed disposable index. Declare only platform and Python
