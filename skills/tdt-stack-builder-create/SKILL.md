@@ -47,6 +47,10 @@ protocol; this stack supplies only inert templates and agent guidance.
    names. Match each frontmatter name to its directory and manifest path exactly.
    Write stack.json, skills/<name>/SKILL.md, README.md and registry-submission.md.
    Give the skill concrete instructions that accomplish the user's purpose.
+   Reserve `.tdt/` for installed workspace harnesses. Generated project-local
+   stack artifacts use `.tdt-project/<stack-id>/`; shared identity belongs in
+   `.tdt-project/project.json` under the installed contract. Never scaffold a
+   project's `.tdt/` or add a legacy lookup. Preserve other stack namespaces.
    Do not blindly dump the brief into executable instructions. List every bundled
    file explicitly in stack.json. README and submission notes may remain unlisted
    repository files; installed documentation goes under docs/ and is listed.
