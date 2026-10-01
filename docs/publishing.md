@@ -40,6 +40,13 @@ renaming the GitHub repository alone does not change an older release archive.
 Check required fields, numeric version, names/frontmatter, explicit file lists,
 hooks, docs, knowledge, safe paths, limits and v2 compatibility/asset hashes. Declare publication metadata in the `marketplace` object in `stack.json`. CLI absence or unsupported contract is incomplete.
 
+Review skills, templates and helpers for project artifact destinations. Reject
+project-local `.tdt/` writes or legacy lookups: that directory is reserved for
+workspace harnesses. Stack artifacts use `.tdt-project/<stack-id>/`, with shared
+identity only in `.tdt-project/project.json` according to the installed contract.
+Workspace `.tdt/stacks/`, contracts and state remain valid. Manifest validation
+does not enforce the destinations of agent-directed or executable writes.
+
 Validate an isolated archive of the exact candidate commit too, not only the
 working directory. Inspect archive entries before extraction; reject traversal,
 symlinks, special files and collisions. Check all selected files are present and
